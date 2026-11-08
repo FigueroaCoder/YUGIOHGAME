@@ -1,0 +1,18 @@
+/* Barra superior */
+/* barra superior */
+#app>.sh{position:sticky;top:0;z-index:60;width:100%;background:linear-gradient(#0a0830f7,#07051eeb);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid #ffffff1a;box-shadow:0 12px 30px #0009}
+#app>.sh:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:linear-gradient(90deg,transparent,var(--ac),var(--ac2),transparent)}
+.sh-in{max-width:1500px;margin:0 auto;display:flex;align-items:center;gap:18px;padding:0 22px;min-height:66px}
+.sh-logo{cursor:pointer;line-height:.92;flex:none;display:flex;flex-direction:column}
+.sh-logo span{font:italic 800 13px var(--ft);letter-spacing:.55em;color:var(--ac)}.sh-logo b{font:italic 800 25px var(--ft);letter-spacing:.04em;color:#fff;text-transform:uppercase}
+.sh-nav{flex:1;display:flex;align-items:stretch;gap:2px;overflow-x:auto;scrollbar-width:none;min-width:0}.sh-nav::-webkit-scrollbar{display:none}
+#app .sh button.sh-tab{position:relative;flex:none;height:66px;padding:0 18px;background:none;color:#ffffffb3;clip-path:none;font:italic 800 18px var(--ft);letter-spacing:.06em;border-bottom:3px solid transparent;display:flex;align-items:center;gap:8px;transform:none;filter:none}
+#app .sh button.sh-tab:hover{color:#fff;background:#ffffff0f}
+#app .sh button.sh-tab.on{color:#fff;background:linear-gradient(#00e5ff00,#00e5ff2b);border-bottom-color:var(--ac)}
+#app .sh button.sh-tab.ad{color:#c9a8ff}
+.sh-tab i{font:800 12px Rajdhani,sans-serif;font-style:normal;background:var(--pk);color:#fff;border-radius:10px;min-width:18px;padding:1px 6px;text-align:center}
+.sh-r{display:flex;align-items:center;gap:12px;flex:none}
+.sh-coin{display:flex;align-items:center;gap:8px;font:italic 800 22px var(--ft);color:#ffe27a;background:#00000070;border:1px solid #ffffff22;padding:5px 16px;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%)}
+#app .sh button.sh-me{display:flex;align-items:center;gap:10px;padding:5px 18px 5px 6px;background:#ffffff16;color:#fff;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 100%,0 100%);font:italic 800 17px var(--ft)}
+.sh-lv{width:34px;height:34px;border-radius:50%;background:linear-gradient(#ffe38a,#d9a62a);color:#1a1204;display:flex;align-items:center;justify-content:center;font:800 18px Rajdhani,sans-serif;font-style:normal}
+@media(max-width:900px){.sh-in{flex-wrap:wrap;gap:4px 10px;padding:8px 12px 0}.sh-logo b{font-size:20px}.sh-r{margin-left:auto}.sh-nm{display:none}.sh-nav{order:3;width:100%;flex:none}#app .sh button.sh-tab{height:44px;padding:0 14px;font-size:16px}#app .ap{padding:18px 14px 90px}}

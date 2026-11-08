@@ -1,0 +1,33 @@
+/* Interfaz estilo FUT: variables y base */
+/* ===== v6: interfaz estilo FUT (solo menus; el duelo no cambia) ===== */
+#app,#pkfx,#mdl{--ac:#00e5ff;--ac2:#00ff9d;--vi:#8a4dff;--pk:#ff2d78;--mu:#9aa6d8;--ft:"Barlow Condensed","Rajdhani","Segoe UI",sans-serif}
+#app{flex-direction:column;align-items:center;justify-content:flex-start;background:radial-gradient(ellipse 80% 55% at 6% 0,#1b5cff3d,transparent 60%),radial-gradient(ellipse 70% 60% at 100% 100%,#8a2cff55,transparent 62%),linear-gradient(160deg,#0b0838,#07051e 55%,#04030f);font:600 17px Rajdhani,"Segoe UI",sans-serif;scrollbar-width:thin;scrollbar-color:#00e5ff66 transparent}
+#app::-webkit-scrollbar{width:10px}#app::-webkit-scrollbar-thumb{background:#00e5ff55;border-radius:6px}
+#app:before{content:"";position:fixed;inset:0;pointer-events:none;background:repeating-linear-gradient(118deg,#ffffff08 0 2px,transparent 2px 66px)}
+#app .ap{width:min(1320px,100%);padding:26px 22px 90px}
+#app h1{font:italic 800 clamp(32px,5vw,54px)/1 var(--ft);text-transform:uppercase;letter-spacing:.02em;text-align:left;margin:4px 0 22px;padding-left:24px;position:relative;background:none;-webkit-background-clip:border-box;background-clip:border-box;color:#fff;filter:none}
+#app h1:before{content:"";position:absolute;left:0;top:3px;bottom:3px;width:9px;background:linear-gradient(var(--ac),var(--ac2));transform:skewX(-14deg)}
+#app h2{font:italic 800 22px/1.1 var(--ft);text-transform:uppercase;letter-spacing:.06em;color:#fff;margin:0 0 12px}
+#app p{line-height:1.4}#app .mut{color:var(--mu);opacity:1}
+#app .pn{position:relative;background:linear-gradient(180deg,#ffffff10,#ffffff04),#0b0930dd;border:0;border-left:3px solid var(--ac);border-radius:0;padding:18px 22px;margin:16px 0;clip-path:polygon(0 0,100% 0,100% calc(100% - 18px),calc(100% - 18px) 100%,0 100%)}
+#app label{font:700 13px var(--ft);letter-spacing:.2em;text-transform:uppercase;color:var(--ac);margin:14px 0 5px}
+#app input,#app select,#app textarea{font:600 17px Rajdhani,sans-serif;color:#fff;background:#06041add;border:1px solid #ffffff26;border-bottom:2px solid var(--ac);border-radius:3px;padding:11px 13px;transition:box-shadow .15s}
+#app select{font-size:16px;padding:10px 12px}
+#app input:focus,#app select:focus,#app textarea:focus{box-shadow:0 0 0 3px #00e5ff33,0 10px 24px -12px var(--ac)}
+#app input[type=checkbox]{width:auto;box-shadow:none}
+#app button{font:italic 800 17px/1 var(--ft);text-transform:uppercase;letter-spacing:.07em;color:#03122b;background:linear-gradient(100deg,var(--ac),var(--ac2));border:0;border-radius:0;padding:13px 28px;clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%);box-shadow:none;transition:filter .15s,transform .15s}
+#app button:hover{filter:brightness(1.1) saturate(1.1);transform:translateY(-1px)}
+#app button.mini{font-size:14px;padding:8px 18px;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%)}
+#app button.ghost,#app button.pill{background:#ffffff1c;color:#fff;border:0;box-shadow:none}
+#app button.ghost:hover,#app button.pill:hover{background:#ffffff32}
+#app button.pill{font:italic 700 16px var(--ft);padding:11px 22px}
+#app button:disabled{filter:grayscale(1) brightness(.6);opacity:.75;transform:none}
+#app button.plus{clip-path:none;border-radius:50%;width:56px;height:56px;padding:0;font-size:26px}
+#app .dk2 button{clip-path:none;border-radius:6px;padding:2px 12px}
+#app button.sy-x{clip-path:none;border-radius:50%}
+#app .tabs{gap:6px;margin-bottom:10px}#app .tabs button{flex:1;background:#ffffff14;color:#ffffffbb}#app .tabs button.on{background:linear-gradient(100deg,var(--ac),var(--ac2));color:#03122b}
+#app .hd button[data-act=goback],#app .hd [data-act=gshop]{display:none}
+#app .hd .nm{font:italic 800 28px var(--ft);text-transform:uppercase}
+#app details>summary{cursor:pointer;color:var(--ac);font:italic 800 19px var(--ft);text-transform:uppercase;letter-spacing:.05em}
+#app .err{color:#ff7d9d}
+#app .id{font:800 18px monospace;color:var(--ac2);letter-spacing:.14em}

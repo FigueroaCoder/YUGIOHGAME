@@ -1,0 +1,8 @@
+/* En línea y perfil */
+/* en linea / perfil */
+.on-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 18px;align-items:start}@media(max-width:900px){.on-grid{grid-template-columns:1fr}}
+#app .pl{padding:11px 4px;border-bottom:1px solid #ffffff14}#app .pl:hover{background:#ffffff08}
+.pf-tag{font:italic 800 14px var(--ft);letter-spacing:.12em;background:var(--vi);color:#fff;padding:2px 10px;vertical-align:middle;margin-left:8px}
+.pf-st{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:6px}@media(max-width:700px){.pf-st{grid-template-columns:repeat(2,1fr)}}
+.pf-s{padding:18px;background:linear-gradient(#ffffff12,#ffffff04),#0b0930dd;border-top:3px solid var(--ac);clip-path:polygon(0 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%)}
+.pf-s b{display:block;font:italic 800 52px/1 var(--ft);color:#fff}.pf-s span{font:700 13px var(--ft);letter-spacing:.2em;text-transform:uppercase;color:var(--mu)}

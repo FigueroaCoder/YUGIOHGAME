@@ -1,0 +1,22 @@
+/* Colección, sobres, cambios y admin */
+/* coleccion, sobres, cambios, admin */
+#app .cw>.pn{background:linear-gradient(#ffffff0d,#ffffff03),#0b0930dd;border-radius:0;border:0;border-left:3px solid var(--vi)}
+#app .cs h2{font:italic 800 26px var(--ft);font-variant:normal;letter-spacing:.06em}
+#app .ck{border:0;border-left:4px solid transparent;border-radius:0;background:#ffffff0d;padding:11px 18px;margin:7px 0;font:italic 800 20px var(--ft);text-transform:uppercase;letter-spacing:.04em;clip-path:polygon(0 0,100% 0,calc(100% - 12px) 100%,0 100%);transition:background .15s}
+#app .ck:hover{background:#ffffff18}#app .ck.on{border-left-color:var(--ac);background:linear-gradient(90deg,#00e5ff3d,#00e5ff0d);color:#fff}
+#app .ck i{color:var(--ac);font:800 18px Rajdhani,sans-serif}
+#app .tc{border:0;border-top:3px solid var(--g,#ffffff33);border-radius:10px;background:linear-gradient(#171253,#0a0828);box-shadow:0 12px 26px -14px #000,0 0 0 1px #ffffff12 inset;transition:transform .15s,box-shadow .15s}
+#app .tc:hover{transform:translateY(-4px);box-shadow:0 0 22px -4px var(--g,#fff3),0 0 0 1px #ffffff18 inset}
+#app .tc.on{outline:3px solid #ffe27a;outline-offset:-3px;box-shadow:0 0 24px #ffe27a77}#app .tc.dkd{box-shadow:0 0 0 2px var(--ac) inset,0 0 18px -4px var(--ac)}
+#app .tc img{border-radius:6px;box-shadow:0 10px 20px -8px #000}
+#app .tc b{font:italic 800 19px/1.1 var(--ft);text-transform:uppercase}#app .tc u{color:var(--ac)}#app .tc small{color:var(--mu)}
+#app .tc em{background:var(--pk);color:#fff}
+#app .tb select{border-radius:3px}
+#app .pkt{border:0;border-top:4px solid var(--c);border-radius:0;padding:22px 18px;background:linear-gradient(165deg,#ffffff1c,#0a0828 72%);clip-path:polygon(0 0,100% 0,100% calc(100% - 22px),calc(100% - 22px) 100%,0 100%)}
+#app .pkt h3{font:italic 800 25px var(--ft);text-transform:uppercase;color:#fff;letter-spacing:.04em}
+#app .pki em{background:var(--pk);color:#fff}
+#app .trd{padding:14px 16px;margin:12px 0;background:#ffffff0a;border:0;border-left:3px solid var(--ac2)}
+#app .st div{background:#ffffff0d;border-radius:0}#app .st b{font:italic 800 30px var(--ft)}
+#app .ct{clip-path:none;border-radius:0;background:#ffffff0d;color:#fff;font:italic 700 16px var(--ft);text-transform:uppercase;letter-spacing:.04em;padding:9px 14px;border-left:3px solid transparent}
+#app .ct:hover{background:#ffffff1a}#app .ct.on{background:linear-gradient(90deg,#00e5ff38,#0000);border-left-color:var(--ac);color:#fff}
+#app .cc{background:#0a0828cc;border:0;border-top:2px solid #ffffff22;border-radius:8px}

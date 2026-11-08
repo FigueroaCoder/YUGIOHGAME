@@ -1,0 +1,9 @@
+/* Acceso (login y registro) */
+/* acceso */
+.au{width:100%;flex:1;min-height:100vh;display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:30px;padding:40px 6vw}
+.au-art{position:relative;height:min(68vh,540px)}.au-art img{position:absolute;width:min(250px,25vw);border-radius:12px;border:2px solid #ffffff77;box-shadow:0 26px 54px #000d}
+.au-art img:nth-child(1){left:2%;top:16%;transform:rotate(-12deg)}.au-art img:nth-child(2){left:27%;top:2%;transform:rotate(4deg);z-index:2}.au-art img:nth-child(3){left:52%;top:20%;transform:rotate(14deg)}
+.au-box{width:min(480px,100%);justify-self:center;background:#0b0930ea;border-left:4px solid var(--ac);padding:32px 30px 30px;clip-path:polygon(0 0,100% 0,100% calc(100% - 26px),calc(100% - 26px) 100%,0 100%)}
+.au-logo{margin-bottom:18px}.au-logo small{display:block;font:italic 800 13px var(--ft);letter-spacing:.4em;text-transform:uppercase;color:var(--ac);margin-bottom:6px}
+.au-logo b{display:block;font:italic 800 clamp(40px,6vw,64px)/.92 var(--ft);text-transform:uppercase;color:#fff;text-shadow:0 0 30px #00e5ff55}
+@media(max-width:860px){.au{grid-template-columns:1fr;padding:24px 14px;min-height:100%}.au-art{display:none}}

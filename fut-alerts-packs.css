@@ -1,0 +1,12 @@
+/* Avisos y apertura de sobres */
+/* avisos y apertura de sobres */
+#mdl .tst{background:#0a0830f5;border:0;border-left:4px solid var(--ac);border-radius:0;font:600 17px Rajdhani,sans-serif;box-shadow:0 10px 34px #000b}
+#mdl .ch{background:linear-gradient(#171253,#0a0830);border:0;border-top:4px solid var(--ac2);border-radius:6px;box-shadow:0 16px 50px #000d,0 0 40px #00e5ff33;font-family:Rajdhani,sans-serif}
+#mdl button{font:italic 800 16px/1 var(--ft);text-transform:uppercase;letter-spacing:.07em;background:linear-gradient(100deg,var(--ac),var(--ac2));color:#03122b;border:0;border-radius:0;padding:11px 24px;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%);box-shadow:none}
+#mdl button.ghost{background:#ffffff22;color:#fff;border:0}
+#pkfx{background:radial-gradient(ellipse at 50% 38%,#2b1b7c,#07051ef6 70%),#02030a}
+#pkfx h2{font:italic 800 36px var(--ft);text-transform:uppercase;letter-spacing:.06em;color:#fff}
+#pkfx button{font:italic 800 19px/1 var(--ft);text-transform:uppercase;letter-spacing:.07em;background:linear-gradient(100deg,var(--ac),var(--ac2));color:#03122b;border:0;border-radius:0;padding:15px 38px;clip-path:polygon(14px 0,100% 0,calc(100% - 14px) 100%,0 100%);box-shadow:none}
+#pkfx button.ghost{background:#ffffff22;color:#fff;border:0;font:italic 700 17px var(--ft);padding:12px 26px}
+#pkfx .sd h3{font:italic 800 34px/1 var(--ft);text-transform:uppercase}
+#pkfx .sy-vt{font:italic 800 clamp(48px,11vw,96px)/1 var(--ft);letter-spacing:.04em}

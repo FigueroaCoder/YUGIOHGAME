@@ -1,0 +1,14 @@
+/* Modo historia */
+/* modo historia con la nueva paleta */
+.sy-eye{color:var(--ac)}.sy-bar i{background:linear-gradient(90deg,var(--ac),var(--ac2))}
+.sy-hero{border:0;border-left:4px solid var(--ac);border-radius:0;background:linear-gradient(110deg,#1a3bff4d,#8a2cff40 55%,#0b0930dd),#0b0930;clip-path:polygon(0 0,100% 0,100% calc(100% - 24px),calc(100% - 24px) 100%,0 100%)}
+#app .sy-ti{font:italic 800 clamp(28px,5vw,44px)/1 var(--ft);text-transform:uppercase;letter-spacing:.02em}
+.sy-lv>b{font-family:var(--ft);font-style:italic}
+.sy-chip{background:#00000066;border:1px solid #ffffff24;border-radius:0;font:italic 800 19px var(--ft);clip-path:polygon(9px 0,100% 0,calc(100% - 9px) 100%,0 100%);padding:4px 18px}
+.sy-map{border-radius:0;border:0;border-left:3px solid var(--vi);clip-path:polygon(0 0,100% 0,100% calc(100% - 22px),calc(100% - 22px) 100%,0 100%)}
+.sy-sec{font:italic 800 14px var(--ft);color:var(--ac)}
+.sy-nm{font:italic 800 15px/1.1 var(--ft);text-transform:uppercase}
+#app .sy-dh h3,#app .sy-pk h3{font:italic 800 26px/1.05 var(--ft);text-transform:uppercase}
+.sy-det{border-radius:0}.sy-t{border-radius:0;clip-path:polygon(0 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%)}
+.sy-t b,.sy-price{font-family:var(--ft);font-style:italic}.sy-pk{border-radius:0;clip-path:polygon(0 0,100% 0,100% calc(100% - 20px),calc(100% - 20px) 100%,0 100%)}
+.sy-up{font-family:var(--ft);font-style:italic}

@@ -1,0 +1,20 @@
+/* Administrador de la intro */
+/* ---- admin de la intro ---- */
+let IA=null,IDUR=0;
+const iaInit=()=>{IA={img:ICFG.img||"",vend:ICFG.vend==null?INTRO_END:ICFG.vend,lab:ICFG.lab||""}};
+const mmss=s=>{s=Math.round(s);return Math.floor(s/60)+":"+String(s%60).padStart(2,"0")};
+function iUpd(){const d=$("#idur");if(d)d.textContent=IDUR?mmss(IDUR):"no se encontró el archivo intro.mp4";const e=$("#iend"),t=$("#iendt");if(e&&t){const n=Math.floor(+e.value||0);t.textContent=n>0?"= "+mmss(IDUR?Math.min(n,IDUR):n):"= hasta el final"}}
+function vidDur(){if(IDUR)return void setTimeout(iUpd,0);setTimeout(iUpd,0);const v=document.createElement("video");v.preload="metadata";v.onloadedmetadata=()=>{IDUR=v.duration||0;iUpd()};v.onerror=()=>iUpd();v.src=INTRO_VID}
+function rIntro(){if(!IA)iaInit();vidDur();return`<div class="ap"><h1>INTRO DEL JUEGO</h1>
+<div class="pn"><h2>Imagen de temporada</h2><p class="mut">Pantalla de carga que ve quien ya tiene la sesión iniciada (unos 3 segundos) antes de entrar.</p><img class="ipv" id="iipv" src="${esc(IA.img||INTRO_IMG0)}" alt=""><input id="iimg" type="file" accept="image/*" hidden><div class="row"><button data-act="iimgpick">CAMBIAR IMAGEN</button><button class="ghost" data-act="iimgrst">USAR LA ORIGINAL</button></div><label>Texto de abajo a la derecha</label><input id="ilab" maxlength="30" value="${esc(IA.lab||INTRO_LAB)}" placeholder="${INTRO_LAB}"><div class="row" style="margin-top:12px"><button class="ghost" data-act="isplprev">VER PANTALLA DE TEMPORADA</button></div></div>
+<div class="pn"><h2>Video de inicio</h2><p class="mut">Lo ve quien abre el link sin sesión iniciada, antes de entrar o crear su usuario. Duración total del video: <b id="idur">…</b></p><label>El video se corta en el segundo (0 = hasta el final)</label><div class="row"><input id="iend" type="number" min="0" step="1" inputmode="numeric" value="${IA.vend}" style="max-width:160px"><span class="mut" id="iendt"></span></div><div class="row" style="margin-top:12px"><button class="ghost" data-act="ivprev">VER VIDEO</button></div></div>
+<div class="pn"><button data-act="isave">GUARDAR PARA TODOS</button></div></div>`}
+function syncIA(){if(!IA)iaInit();const l=$("#ilab"),e=$("#iend");if(l)IA.lab=l.value.trim();if(e){let n=Math.max(0,Math.floor(+e.value||0));if(n>0&&n<3)n=3;if(IDUR&&n>Math.floor(IDUR))n=Math.floor(IDUR);IA.vend=n;e.value=n;iUpd()}}
+Object.assign(ACT,{gintro(){IA=null;showApp("intro")},iimgpick(){const i=$("#iimg");i&&i.click()},
+iimgrst(){syncIA();IA.img="";const p=$("#iipv");if(p)p.src=INTRO_IMG0;toast("Se usará la imagen original al guardar",2200)},
+isplprev(){syncIA();const sp=mkSplash(3000,{img:IA.img,lab:IA.lab});setTimeout(sp.close,3000)},
+ivprev(){syncIA();playIntro({end:IA.vend>0?IA.vend:1e9})},
+async isave(){syncIA();try{await D("config","intro").set({img:IA.img||"",vend:IA.vend,lab:IA.lab||"",upd:Date.now()});iSave({img:IA.img||"",vend:IA.vend,lab:IA.lab||""});toast("Intro guardada para todos los jugadores")}catch(e){toast("No se pudo guardar. Revisa que las reglas de Firestore permitan la colección duelo_config",6000)}}});
+app.addEventListener("input",e=>{if(e.target.id=="iend")iUpd()});
+app.addEventListener("change",e=>{if(e.target.id!="iimg"||!e.target.files[0])return;const inp=e.target,im=new Image(),u=URL.createObjectURL(inp.files[0]);im.onload=()=>{URL.revokeObjectURL(u);syncIA();const cv=document.createElement("canvas");let S=1600,q=.86,d="";for(let k=0;k<14;k++){const r=Math.min(1,S/Math.max(im.width,im.height));cv.width=Math.round(im.width*r);cv.height=Math.round(im.height*r);const cx=cv.getContext("2d");cx.fillStyle="#000";cx.fillRect(0,0,cv.width,cv.height);cx.drawImage(im,0,0,cv.width,cv.height);d=cv.toDataURL("image/jpeg",q);if(d.length<850000)break;if(q>.55)q-=.07;else S=Math.round(S*.85)}
+if(d.length>=950000){inp.value="";return toast("La imagen es demasiado pesada. Prueba con otra")}IA.img=d;const p=$("#iipv");if(p)p.src=d;inp.value="";toast("Imagen lista. Pulsa «Guardar para todos»",3000)};im.onerror=()=>toast("Esa imagen no se pudo leer");im.src=u});
